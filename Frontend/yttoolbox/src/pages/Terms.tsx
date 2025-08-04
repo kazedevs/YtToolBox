@@ -1,20 +1,29 @@
 import { Box, Container, Typography, List, ListItem, ListItemText } from '@mui/material';
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const Terms = () => {
   useEffect(() => {
     document.title = "Terms of Service - YT ToolBox | YouTube Tools Terms";
   }, []);
   return (
-    <Box sx={{ py: { xs: 4, md: 8 }, bgcolor: '#ffffff', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <Container maxWidth="lg">
-        <Box sx={{ maxWidth: '800px', mx: 'auto', px: { xs: 2, sm: 0 }, textAlign: 'center' }}>
-          <Typography variant="h3" component="h1" sx={{ fontWeight: 800, mb: 4, fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' }, lineHeight: 1.2, color: '#000000' }}>
-            Terms of Service
-          </Typography>
-          <Typography variant="body1" sx={{ mb: 4, color: '#000000', lineHeight: 1.6 }}>
-            Last updated: August 4, 2025
-          </Typography>
+    <>
+      <Helmet>
+        <title>Terms of Service - YtToolBox</title>
+        <meta name="description" content="Read the Terms of Service for YtToolBox - free YouTube tools including thumbnail downloader, timestamp generator, and embed code generator." />
+        <meta property="og:title" content="Terms of Service - YtToolBox" />
+        <meta property="og:url" content="https://yttoolbox.com/terms" />
+        <link rel="canonical" href="https://yttoolbox.com/terms" />
+      </Helmet>
+      <Box sx={{ py: { xs: 4, md: 8 }, bgcolor: '#ffffff', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <Container maxWidth="lg">
+          <Box sx={{ maxWidth: '800px', mx: 'auto', px: { xs: 2, sm: 0 }, textAlign: 'center' }}>
+            <Typography variant="h3" component="h1" sx={{ fontWeight: 800, mb: 4, fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' }, lineHeight: 1.2, color: '#000000' }}>
+              Terms of Service
+            </Typography>
+            <Typography variant="body1" sx={{ mb: 4, color: '#000000', lineHeight: 1.6 }}>
+              Last updated: August 4, 2025
+            </Typography>
             <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, mt: 4, color: '#000000' }}>
               Acceptance of Terms
             </Typography>
@@ -97,6 +106,7 @@ const Terms = () => {
         </Box>
       </Container>
     </Box>
+  </>
   );
 };
 

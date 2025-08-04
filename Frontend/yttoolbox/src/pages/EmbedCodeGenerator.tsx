@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import {
   Container,
   Typography,
@@ -82,6 +83,49 @@ const EmbedCodeGenerator = () => {
 
   return (
     <>
+      <Helmet>
+        <title>YouTube Embed Code Generator - Customizable Embed Codes | YtToolBox</title>
+        <meta name="description" content="Generate customizable YouTube embed codes with options for autoplay, controls, modest branding, and more. Create responsive embed codes for your website or blog. 100% free." />
+        <meta name="keywords" content="youtube embed code generator, youtube embed generator, youtube iframe generator, youtube embed code, youtube video embed, responsive youtube embed, custom youtube embed" />
+        <meta property="og:title" content="YouTube Embed Code Generator - Customizable Embed Codes" />
+        <meta property="og:description" content="Generate customizable YouTube embed codes with options for autoplay, controls, and more. Create responsive embed codes for your website." />
+        <meta property="og:url" content="https://yttoolbox.com/embed-code-generator" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://yttoolbox.com/og-embed-generator.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="YouTube Embed Code Generator - Customizable Embed Codes" />
+        <meta name="twitter:description" content="Generate customizable YouTube embed codes with options for autoplay, controls, and more." />
+        <meta name="twitter:image" content="https://yttoolbox.com/og-embed-generator.jpg" />
+        <link rel="canonical" href="https://yttoolbox.com/embed-code-generator" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "YouTube Embed Code Generator",
+              "description": "Generate customizable YouTube embed codes for websites",
+              "sameAs": ["https://yttoolbox.com/embed-code-generator"],
+              "applicationCategory": "MultimediaApplication",
+              "operatingSystem": "Web",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              },
+              "featureList": [
+                "Customizable YouTube embed codes",
+                "Responsive embed options",
+                "Autoplay settings",
+                "Control customization",
+                "No registration required"
+              ]
+            }
+          `}
+        </script>
+      </Helmet>
+      
       <Container maxWidth="md" sx={{ py: 4 }}>
       <Typography variant="h4" component="h1" gutterBottom align="center">
         YouTube Embed Code Generator

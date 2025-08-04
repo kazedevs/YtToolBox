@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import {
   Container,
   Typography,
@@ -13,6 +14,69 @@ import CodeIcon from "@mui/icons-material/Code";
 const HomePage = () => {
   return (
     <>
+      <Helmet>
+        <title>YtToolBox - Free YouTube Tools | Thumbnail Downloader, Timestamp Generator & More</title>
+        <meta name="description" content="Complete suite of free YouTube tools including thumbnail downloader, timestamp link generator, embed code generator, and more. Download YouTube thumbnails in HD quality, create shareable timestamps, and generate embed codes - all 100% free with no registration required." />
+        <meta name="keywords" content="youtube tools, free youtube tools, youtube thumbnail downloader, youtube timestamp generator, youtube embed code generator, youtube utilities, youtube downloader" />
+        <meta property="og:title" content="YtToolBox - Free YouTube Tools Suite" />
+        <meta property="og:description" content="Complete suite of free YouTube tools including thumbnail downloader, timestamp link generator, embed code generator, and more. All tools are 100% free with no registration required." />
+        <meta property="og:url" content="https://yttoolbox.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://yttoolbox.com/og-home.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="YtToolBox - Free YouTube Tools Suite" />
+        <meta name="twitter:description" content="Complete suite of free YouTube tools. All tools are 100% free with no registration required." />
+        <meta name="twitter:image" content="https://yttoolbox.com/og-home.jpg" />
+        <link rel="canonical" href="https://yttoolbox.com/" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "YtToolBox",
+              "alternateName": "YouTube ToolBox",
+              "url": "https://yttoolbox.com/",
+              "description": "Complete suite of free YouTube tools including thumbnail downloader, timestamp link generator, embed code generator, and more.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "YtToolBox",
+                "url": "https://yttoolbox.com/"
+              },
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://yttoolbox.com/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              },
+              "mainEntity": {
+                "@type": "ItemList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "YouTube Thumbnail Downloader",
+                    "url": "https://yttoolbox.com/thumbnail-downloader"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "YouTube Timestamp Link Generator",
+                    "url": "https://yttoolbox.com/timestamp-link-generator"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "YouTube Embed Code Generator",
+                    "url": "https://yttoolbox.com/embed-code-generator"
+                  }
+                ]
+              }
+            }
+          `}
+        </script>
+      </Helmet>
+      
       {/* Tools Section - Three Cards */}
       <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3 }, py: 6 }} id="tools-section">
         <Typography variant="h1" sx={{ 

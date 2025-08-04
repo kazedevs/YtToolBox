@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yttoolbox.com/sitemap.xml
+
+# Allow crawling of all pages
+Disallow:
+
+# Allow specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay for all bots
+Crawl-delay: 1

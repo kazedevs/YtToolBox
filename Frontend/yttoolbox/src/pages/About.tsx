@@ -4,11 +4,13 @@ import {
   Typography,
 } from "@mui/material";
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const About = () => {
   useEffect(() => {
     document.title = "About YT ToolBox - Free YouTube Tools & Services";
   }, []);
+
   const features = [
     {
       icon: (
@@ -44,6 +46,13 @@ const About = () => {
 
   return (
     <>
+      <Helmet>
+        <title>About YtToolBox - Free YouTube Tools Suite</title>
+        <meta name="description" content="Learn about YtToolBox - the complete suite of free YouTube tools designed to help creators and users with thumbnail downloads, timestamp generation, and embed code creation." />
+        <meta property="og:title" content="About YtToolBox - Free YouTube Tools Suite" />
+        <meta property="og:url" content="https://yttoolbox.com/about" />
+        <link rel="canonical" href="https://yttoolbox.com/about" />
+      </Helmet>
       <Box sx={{ py: { xs: 4, md: 8 }, bgcolor: "background.default" }}>
       <Container maxWidth="lg">
         {/* Hero Section */}

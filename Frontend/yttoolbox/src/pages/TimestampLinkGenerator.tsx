@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import {
   Container,
   Typography,
@@ -67,6 +68,48 @@ const TimestampLinkGenerator = () => {
 
   return (
     <>
+      <Helmet>
+        <title>YouTube Timestamp Link Generator - Create Shareable Links | YtToolBox</title>
+        <meta name="description" content="Create YouTube links that start at specific timestamps. Generate shareable links for YouTube videos at any exact time - hours, minutes, and seconds. 100% free tool." />
+        <meta name="keywords" content="youtube timestamp generator, youtube timestamp link, youtube time link, share youtube at specific time, youtube timestamp url, youtube start time link" />
+        <meta property="og:title" content="YouTube Timestamp Link Generator - Create Shareable Links" />
+        <meta property="og:description" content="Create YouTube links that start at specific timestamps. Generate shareable links for YouTube videos at any exact time." />
+        <meta property="og:url" content="https://yttoolbox.com/timestamp-link-generator" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://yttoolbox.com/og-timestamp-generator.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="YouTube Timestamp Link Generator - Create Shareable Links" />
+        <meta name="twitter:description" content="Create YouTube links that start at specific timestamps. 100% free tool." />
+        <meta name="twitter:image" content="https://yttoolbox.com/og-timestamp-generator.jpg" />
+        <link rel="canonical" href="https://yttoolbox.com/timestamp-link-generator" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "YouTube Timestamp Link Generator",
+              "description": "Free tool to create YouTube links that start at specific timestamps",
+              "sameAs": ["https://yttoolbox.com/timestamp-link-generator"],
+              "applicationCategory": "MultimediaApplication",
+              "operatingSystem": "Web",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              },
+              "featureList": [
+                "Create timestamped YouTube links",
+                "Support for hours, minutes, seconds",
+                "Shareable links",
+                "No registration required"
+              ]
+            }
+          `}
+        </script>
+      </Helmet>
+      
       <Container maxWidth="md" sx={{ py: 4 }}>
       <Typography variant="h4" component="h1" gutterBottom align="center">
         YouTube Timestamp Link Generator

@@ -4,6 +4,7 @@ import {
   Typography,
 } from "@mui/material";
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const Privacy = () => {
   useEffect(() => {
@@ -11,26 +12,35 @@ const Privacy = () => {
   }, []);
 
   return (
-    <Box sx={{ py: { xs: 4, md: 8 }, bgcolor: "#ffffff", minHeight: "100vh", display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <Container maxWidth="lg">
-        <Box sx={{ maxWidth: "800px", mx: "auto", px: { xs: 2, sm: 0 }, textAlign: 'center' }}>
-          <Typography
-            variant="h3"
-            component="h1"
-            sx={{
-              fontWeight: 800,
-              mb: 4,
-              fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
-              lineHeight: 1.2,
-              color: "#000000",
-            }}
-          >
-            Privacy Policy
-          </Typography>
-          
-          <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.6, color: '#000000' }}>
-            Last updated: August 4, 2025
-          </Typography>
+    <>
+      <Helmet>
+        <title>Privacy Policy - YtToolBox</title>
+        <meta name="description" content="Read the Privacy Policy for YtToolBox - learn how we protect your data and privacy when using our free YouTube tools." />
+        <meta property="og:title" content="Privacy Policy - YtToolBox" />
+        <meta property="og:url" content="https://yttoolbox.com/privacy" />
+        <link rel="canonical" href="https://yttoolbox.com/privacy" />
+      </Helmet>
+      
+      <Box sx={{ py: { xs: 4, md: 8 }, bgcolor: "#ffffff", minHeight: "100vh", display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <Container maxWidth="lg">
+          <Box sx={{ maxWidth: "800px", mx: "auto", px: { xs: 2, sm: 0 }, textAlign: 'center' }}>
+            <Typography
+              variant="h3"
+              component="h1"
+              sx={{
+                fontWeight: 800,
+                mb: 4,
+                fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
+                lineHeight: 1.2,
+                color: "#000000",
+              }}
+            >
+              Privacy Policy
+            </Typography>
+            
+            <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.6, color: '#000000' }}>
+              Last updated: August 4, 2025
+            </Typography>
 
           <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, mt: 4, color: '#000000' }}>
             What We Collect
@@ -128,6 +138,7 @@ const Privacy = () => {
         </Box>
       </Container>
     </Box>
+  </>
   );
 };
 
