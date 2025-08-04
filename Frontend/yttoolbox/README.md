@@ -1,23 +1,94 @@
-# React + TypeScript + Vite
+# YtToolBox - Free YouTube Tools Suite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive collection of free YouTube tools built with React, TypeScript, and Vite. This web application provides creators and users with essential YouTube utilities without requiring registration.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Available Tools
+- **YouTube Thumbnail Downloader**: Download HD thumbnails from any YouTube video
+- **Timestamp Link Generator**: Create shareable links that start at specific timestamps
+- **Embed Code Generator**: Generate customizable YouTube embed codes for websites
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
 
-## Expanding the ESLint configuration
+### Technical Stack
+- **Frontend**: React 18 with TypeScript
+- **Styling**: Material-UI (MUI) v5
+- **Build Tool**: Vite
+- **Package Manager**: pnpm
+- **Deployment**: Vercel
+- **SEO**: React Helmet Async for meta tags and structured data
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
+- Node.js (v18 or higher)
+- pnpm package manager
+
+### Installation
+```bash
+# Clone the repository
+git clone [repository-url]
+
+# Navigate to project directory
+cd yttoolbox
+
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm dev
+```
+
+### Build for Production
+```bash
+# Build the project
+pnpm build
+
+# Preview production build
+pnpm preview
+```
+
+## Project Structure
+
+```
+yttoolbox/
+├── src/
+│   ├── pages/          # Individual tool pages
+│   ├── components/     # Reusable components
+│   ├── hooks/         # Custom React hooks
+│   └── utils/         # Utility functions
+├── public/            # Static assets
+│   ├── robots.txt     # SEO robots configuration
+│   └── sitemap.xml    # SEO sitemap
+├── vercel.json        # Vercel deployment configuration
+└── package.json       # Project dependencies
+```
+
+## SEO Configuration
+
+The application includes comprehensive SEO optimization:
+- Structured data markup (JSON-LD)
+- Open Graph meta tags
+- Twitter Card meta tags
+- Canonical URLs
+- XML sitemap
+- Robots.txt configuration
+
+## Deployment
+
+This project is configured for deployment on Vercel:
+
+1. Push changes to the main branch
+2. Connect your GitHub repository to Vercel
+3. Deploy automatically on push to main
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit issues and pull requests.
+
+## License
+
+This project is open source and available under the MIT License.
 
       // Remove tseslint.configs.recommended and replace with this
       ...tseslint.configs.recommendedTypeChecked,
