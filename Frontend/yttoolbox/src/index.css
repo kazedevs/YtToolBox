@@ -50,6 +50,22 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
+/* Ensure MUI buttons don't inherit unwanted styles */
+.MuiButton-root {
+  border: none !important;
+  filter: none !important;
+}
+
+.MuiButton-contained {
+  border: none !important;
+  filter: none !important;
+}
+
+.MuiButton-containedPrimary {
+  border: none !important;
+  filter: none !important;
+}
 button:hover {
   border-color: #646cff;
 }

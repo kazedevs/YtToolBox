@@ -56,19 +56,19 @@ const HomePage = () => {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "YouTube Thumbnail Downloader",
-                    "url": "https://yttoolbox.com/thumbnail-downloader"
+                    "url": "https://yttoolbox.com/youtube-thumbnail-downloader"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "YouTube Timestamp Link Generator",
-                    "url": "https://yttoolbox.com/timestamp-link-generator"
+                    "url": "https://yttoolbox.com/youtube-timestamp-link-generator"
                   },
                   {
                     "@type": "ListItem",
                     "position": 3,
                     "name": "YouTube Embed Code Generator",
-                    "url": "https://yttoolbox.com/embed-code-generator"
+                    "url": "https://yttoolbox.com/youtube-embed-code-generator"
                   }
                 ]
               }
@@ -125,7 +125,7 @@ const HomePage = () => {
               flexDirection: 'column',
               backgroundColor: '#fafafa'
             }}
-            onClick={() => window.location.href = '/tools/thumbnail-downloader'}
+            onClick={() => window.location.href = '/youtube-thumbnail-downloader'}
           >
             <Box sx={{ 
               p: 3, 
@@ -183,7 +183,7 @@ const HomePage = () => {
               flexDirection: 'column',
               backgroundColor: '#fafafa'
             }}
-            onClick={() => window.location.href = '/tools/timestamp-link-generator'}
+            onClick={() => window.location.href = '/youtube-timestamp-link-generator'}
           >
             <Box sx={{ 
               p: 3, 
@@ -241,7 +241,7 @@ const HomePage = () => {
               flexDirection: 'column',
               backgroundColor: '#fafafa'
             }}
-            onClick={() => window.location.href = '/tools/embed-code-generator'}
+            onClick={() => window.location.href = '/youtube-embed-code-generator'}
           >
             <Box sx={{ 
               p: 3, 
@@ -300,7 +300,7 @@ const HomePage = () => {
             flexDirection: { xs: 'column', md: 'row' }, 
             gap: { xs: 3, md: 4 }, 
             justifyContent: 'center', 
-            alignItems: 'flex-start' 
+            alignItems: { xs: 'center', md: 'flex-start' } 
           }}>
             <Box sx={{ 
               flex: 1, 
@@ -366,8 +366,9 @@ const HomePage = () => {
             
             <Box sx={{ 
               flex: 1, 
-              maxWidth: { xs: '100%', md: 280 }, 
-              textAlign: 'center'
+              maxWidth: { xs: 280, md: 280 }, 
+              textAlign: 'center',
+              mx: 'auto'
             }}>
               <Box sx={{ 
                 width: 80, 

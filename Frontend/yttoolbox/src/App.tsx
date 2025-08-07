@@ -7,47 +7,110 @@ import TimestampLinkGenerator from "./pages/TimestampLinkGenerator";
 import EmbedCodeGenerator from "./pages/EmbedCodeGenerator";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   return (
     <Router>
-      <div
-        style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
-      >
-        <Navbar />
-        <main
-          style={{
-            flexGrow: 1,
-            paddingTop: "80px",
-            minHeight: "calc(100vh - 160px)",
-          }}
-        >
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route
-              path="/tools/thumbnail-downloader"
-              element={<ThumbnailDownloader />}
-            />
-            <Route
-              path="/tools/timestamp-link-generator"
-              element={<TimestampLinkGenerator />}
-            />
-            <Route
-              path="/tools/embed-code-generator"
-              element={<EmbedCodeGenerator />}
-            />
-            <Route path="/about" element={<About />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/terms" element={<Terms />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <Routes>
+        {/* Routes with Navbar and Footer */}
+        <Route path="/" element={
+          <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+            <Navbar />
+            <main style={{ flexGrow: 1, paddingTop: "80px", minHeight: "calc(100vh - 160px)" }}>
+              <HomePage />
+            </main>
+            <Footer />
+          </div>
+        } />
+        <Route path="/youtube-thumbnail-downloader" element={
+          <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+            <Navbar />
+            <main style={{ flexGrow: 1, paddingTop: "80px", minHeight: "calc(100vh - 160px)" }}>
+              <ThumbnailDownloader />
+            </main>
+            <Footer />
+          </div>
+        } />
+        <Route path="/youtube-timestamp-link-generator" element={
+          <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+            <Navbar />
+            <main style={{ flexGrow: 1, paddingTop: "80px", minHeight: "calc(100vh - 160px)" }}>
+              <TimestampLinkGenerator />
+            </main>
+            <Footer />
+          </div>
+        } />
+        <Route path="/youtube-embed-code-generator" element={
+          <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+            <Navbar />
+            <main style={{ flexGrow: 1, paddingTop: "80px", minHeight: "calc(100vh - 160px)" }}>
+              <EmbedCodeGenerator />
+            </main>
+            <Footer />
+          </div>
+        } />
+        <Route path="/about" element={
+          <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+            <Navbar />
+            <main style={{ flexGrow: 1, paddingTop: "80px", minHeight: "calc(100vh - 160px)" }}>
+              <About />
+            </main>
+            <Footer />
+          </div>
+        } />
+        <Route path="/blog" element={
+          <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+            <Navbar />
+            <main style={{ flexGrow: 1, paddingTop: "80px", minHeight: "calc(100vh - 160px)" }}>
+              <Blog />
+            </main>
+            <Footer />
+          </div>
+        } />
+        <Route path="/blog/:slug" element={
+          <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+            <Navbar />
+            <main style={{ flexGrow: 1, paddingTop: "80px", minHeight: "calc(100vh - 160px)" }}>
+              <BlogPost />
+            </main>
+            <Footer />
+          </div>
+        } />
+        <Route path="/contact" element={
+          <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+            <Navbar />
+            <main style={{ flexGrow: 1, paddingTop: "80px", minHeight: "calc(100vh - 160px)" }}>
+              <Contact />
+            </main>
+            <Footer />
+          </div>
+        } />
+        <Route path="/privacy" element={
+          <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+            <Navbar />
+            <main style={{ flexGrow: 1, paddingTop: "80px", minHeight: "calc(100vh - 160px)" }}>
+              <Privacy />
+            </main>
+            <Footer />
+          </div>
+        } />
+        <Route path="/terms" element={
+          <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+            <Navbar />
+            <main style={{ flexGrow: 1, paddingTop: "80px", minHeight: "calc(100vh - 160px)" }}>
+              <Terms />
+            </main>
+            <Footer />
+          </div>
+        } />
+        {/* Error page without Navbar and Footer */}
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
     </Router>
   );
 }

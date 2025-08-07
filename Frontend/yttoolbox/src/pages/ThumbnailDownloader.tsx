@@ -147,14 +147,14 @@ const ThumbnailDownloader = () => {
         <meta name="keywords" content="youtube thumbnail downloader, download youtube thumbnails, youtube thumbnail download, youtube video thumbnail, hd youtube thumbnail, free youtube thumbnail downloader" />
         <meta property="og:title" content="Free YouTube Thumbnail Downloader - Download HD Thumbnails" />
         <meta property="og:description" content="Download YouTube video thumbnails in HD quality instantly. Get thumbnails in multiple resolutions. 100% free, no registration required." />
-        <meta property="og:url" content="https://yttoolbox.com/thumbnail-downloader" />
+        <meta property="og:url" content="https://yttoolbox.com/youtube-thumbnail-downloader" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://yttoolbox.com/og-thumbnail-downloader.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free YouTube Thumbnail Downloader - Download HD Thumbnails" />
         <meta name="twitter:description" content="Download YouTube video thumbnails in HD quality instantly. 100% free, no registration required." />
         <meta name="twitter:image" content="https://yttoolbox.com/og-thumbnail-downloader.jpg" />
-        <link rel="canonical" href="https://yttoolbox.com/thumbnail-downloader" />
+        <link rel="canonical" href="https://yttoolbox.com/youtube-thumbnail-downloader" />
         
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -164,7 +164,7 @@ const ThumbnailDownloader = () => {
               "@type": "WebApplication",
               "name": "YouTube Thumbnail Downloader",
               "description": "Free tool to download YouTube video thumbnails in HD quality",
-              "sameAs": ["https://yttoolbox.com/thumbnail-downloader"],
+              "sameAs": ["https://yttoolbox.com/youtube-thumbnail-downloader"],
               "applicationCategory": "MultimediaApplication",
               "operatingSystem": "Web",
               "offers": {
@@ -341,6 +341,7 @@ const ThumbnailDownloader = () => {
                   textTransform: "none",
                   fontSize: "1.1rem",
                   backgroundColor: "#FF0000",
+                  border: "none",
                   boxShadow: "0 4px 12px rgba(255, 0, 0, 0.3)",
                   color: "#ffffff",
                 }}

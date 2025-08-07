@@ -42,8 +42,14 @@ const Contact = () => {
           <Typography variant="h4" component="h1" sx={{ fontWeight: 600, mb: 2, color: '#333333' }}>
             Contact Us
           </Typography>
-          <Typography variant="body1" color="text.secondary">
+          <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
             Have questions or feedback? We'd love to hear from you!
+          </Typography>
+          <Typography variant="body1" color="text.secondary">
+            You can also email us directly at:{' '}
+            <a href="mailto:kazed4v@proton.me" style={{ color: '#FF0000', textDecoration: 'none' }}>
+              kazed4v@proton.me
+            </a>
           </Typography>
         </Box>
 
