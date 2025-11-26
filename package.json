@@ -14,7 +14,8 @@
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-icons": "^5.5.0",
-    "sharp": "^0.34.5"
+    "sharp": "^0.34.5",
+    "youtube-transcript": "^1.2.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.17",

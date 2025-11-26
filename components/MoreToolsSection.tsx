@@ -1,6 +1,6 @@
 'use client';
 import { usePathname } from "next/navigation";
-import { MdAccessTime, MdCode, MdImage } from "react-icons/md";
+import { MdAccessTime, MdCode, MdImage, MdDownload } from "react-icons/md";
 import Link from "next/link";
 
 interface Tool {
@@ -32,6 +32,20 @@ const tools: Tool[] = [
         icon: MdImage,
         url: "/youtube-thumbnail-downloader",
         iconColor: "#8B5CF6",
+    },
+    {
+        title: "Profile Picture Downloader",
+        description: "Download channel profile pictures in high quality",
+        icon: MdDownload,
+        url: "/youtube-pfp-downloader",
+        iconColor: "#10B981",
+    },
+    {
+        title: "Banner Downloader",
+        description: "Download channel banners in multiple sizes",
+        icon: MdDownload,
+        url: "/youtube-banner-downloader",
+        iconColor: "#F59E0B",
     },
 ];
 

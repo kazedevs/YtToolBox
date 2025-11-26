@@ -46,6 +46,18 @@ const Footer = () => (
                         >
                             Embed Code Generator
                         </Link>
+                        <Link
+                            href="/youtube-pfp-downloader"
+                            className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                        >
+                            PFP Downloader
+                        </Link>
+                        <Link
+                            href="/youtube-banner-downloader"
+                            className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                        >
+                            Banner Downloader
+                        </Link>
                     </div>
                 </div>
 

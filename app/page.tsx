@@ -80,6 +80,12 @@ const jsonLd = {
         name: "YouTube Profile Picture Downloader",
         url: "https://yttoolbox.com/youtube-pfp-downloader",
       },
+      {
+        "@type": "ListItem",
+        position: 5,
+        name: "YouTube Banner Downloader",
+        url: "https://yttoolbox.com/youtube-banner-downloader",
+      },
     ],
   },
 };
@@ -211,6 +217,77 @@ export default function Home() {
                 </div>
               </div>
             </Link>
+
+            {/* YouTube Banner Downloader Card */}
+            <Link href="/youtube-banner-downloader" className="no-underline">
+              <div className="rounded-lg border border-gray-200 transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-lg cursor-pointer h-full flex flex-col bg-[#fafafa]">
+                <div className="p-6 bg-purple-light flex items-center justify-center rounded-t-lg border-b border-[#e1bee7]">
+                  <MdDownload className="text-5xl text-purple-main" />
+                </div>
+                <div className="flex-grow p-6 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-2 text-[#333333]">
+                      YouTube Banner Downloader
+                    </h3>
+                    <p className="text-[#666666] mb-6 flex-grow">
+                      Download high-quality banners from any YouTube channel.
+                      Get channel banners in multiple resolutions including HD
+                      quality. Perfect for creating thumbnails, social media
+                      content, or archiving channel branding.
+                    </p>
+                  </div>
+                  <button className="w-full py-3 px-6 text-lg border-2 border-purple-main text-purple-main rounded hover:border-purple-dark hover:bg-purple-main/5 transition-colors mt-auto">
+                    Download Banner
+                  </button>
+                </div>
+              </div>
+            </Link>
+            {/* Youtube Transcript Downloader */}
+            <Link href="/youtube-transcript-downloader" className="no-underline">
+              <div className="rounded-lg border border-gray-200 transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-lg cursor-pointer h-full flex flex-col bg-[#fafafa]">
+                <div className="p-6 bg-purple-light flex items-center justify-center rounded-t-lg border-b border-[#e1bee7]">
+                  <MdDownload className="text-5xl text-purple-main" />
+                </div>
+                <div className="flex-grow p-6 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-2 text-[#333333]">
+                      YouTube Transcript Downloader
+                    </h3>
+                    <p className="text-[#666666] mb-6 flex-grow">
+                      Download transcripts from any YouTube video. Get transcripts
+                      in TXT or SRT format with timestamps. Perfect for content
+                      creators, students, and researchers.
+                    </p>
+                  </div>
+                  <button className="w-full py-3 px-6 text-lg border-2 border-purple-main text-purple-main rounded hover:border-purple-dark hover:bg-purple-main/5 transition-colors mt-auto">
+                    Download Transcript
+                  </button>
+                </div>
+              </div>
+            </Link>
+              {/* Youtube video to blog */}
+              <Link href="/youtube-video-to-blog" className="no-underline">
+                <div className="rounded-lg border border-gray-200 transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-lg cursor-pointer h-full flex flex-col bg-[#fafafa]">
+                  <div className="p-6 bg-purple-light flex items-center justify-center rounded-t-lg border-b border-[#e1bee7]">
+                    <MdDownload className="text-5xl text-purple-main" />
+                  </div>
+                  <div className="flex-grow p-6 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-2xl font-semibold mb-2 text-[#333333]">
+                        YouTube Video to Blog
+                      </h3>
+                      <p className="text-[#666666] mb-6 flex-grow">
+                        Convert YouTube videos to blog posts. Get blog posts in
+                        HTML format with timestamps. Perfect for content creators,
+                        students, and researchers.
+                      </p>
+                    </div>
+                    <button className="w-full py-3 px-6 text-lg border-2 border-purple-main text-purple-main rounded hover:border-purple-dark hover:bg-purple-main/5 transition-colors mt-auto">
+                      Convert Video to Blog
+                    </button>
+                  </div>
+                </div>
+              </Link>
           </div>
         </div>
 
