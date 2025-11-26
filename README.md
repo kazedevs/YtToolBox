@@ -1,94 +1,36 @@
-# YtToolBox - Free YouTube Tools Suite
-
-A comprehensive collection of free YouTube tools built with React, TypeScript, and Vite. This web application provides creators and users with essential YouTube utilities without requiring registration.
-
-## Features
-
-### Available Tools
-- **YouTube Thumbnail Downloader**: Download HD thumbnails from any YouTube video
-- **Timestamp Link Generator**: Create shareable links that start at specific timestamps
-- **Embed Code Generator**: Generate customizable YouTube embed codes for websites
-- **Responsive Design**: Works seamlessly on desktop and mobile devices
-
-### Technical Stack
-- **Frontend**: React 18 with TypeScript
-- **Styling**: Material-UI (MUI) v5
-- **Build Tool**: Vite
-- **Package Manager**: pnpm
-- **Deployment**: Vercel
-- **SEO**: React Helmet Async for meta tags and structured data
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-### Prerequisites
-- Node.js (v18 or higher)
-- pnpm package manager
+First, run the development server:
 
-### Installation
 ```bash
-# Clone the repository
-git clone [repository-url]
-
-# Navigate to project directory
-cd YtToolBox-updated/Frontend/yttoolbox
-
-# Install dependencies
-pnpm install
-
-# Start development server
+npm run dev
+# or
+yarn dev
+# or
 pnpm dev
+# or
+bun dev
 ```
 
-### Build for Production
-```bash
-# Build the project
-pnpm build
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-# Preview production build
-pnpm preview
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Project Structure
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-```
-YtToolBox-updated/
-├── Frontend/
-│   └── yttoolbox/
-│       ├── src/
-│       │   ├── pages/          # Individual tool pages
-│       │   ├── components/     # Reusable components
-│       │   ├── hooks/         # Custom React hooks
-│       │   └── utils/         # Utility functions
-│       ├── public/            # Static assets
-│       │   ├── robots.txt     # SEO robots configuration
-│       │   └── sitemap.xml    # SEO sitemap
-│       ├── vercel.json        # Vercel deployment configuration
-│       └── package.json       # Project dependencies
-```
+## Learn More
 
-## SEO Configuration
+To learn more about Next.js, take a look at the following resources:
 
-The application includes comprehensive SEO optimization:
-- Structured data markup (JSON-LD)
-- Open Graph meta tags
-- Twitter Card meta tags
-- Canonical URLs pointing to yttoolbox.com
-- XML sitemap for search engines
-- Robots.txt configuration
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Deployment
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-This project is configured for deployment on Vercel:
+## Deploy on Vercel
 
-1. Push changes to the main branch
-2. Connect your GitHub repository to Vercel
-3. Deploy automatically on push to main
-4. Domain configured: yttoolbox.com
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit issues and pull requests.
-
-## License
-
-This project is open source and available under the MIT License.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
