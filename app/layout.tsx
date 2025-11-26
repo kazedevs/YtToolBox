@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto } from 'next/font/google';
+import Script from 'next/script';
 import "./globals.css";
 
 const roboto = Roboto({
@@ -10,6 +11,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://yttoolbox.com'),
   title: "YtToolBox",
   description: "YouTube Tools Collection",
 };
@@ -23,6 +25,12 @@ export default function RootLayout({
     <html lang="en" className={roboto.variable}>
       <body className={roboto.className}>
         {children}
+        <Script
+          async
+          src="https://cdn.seline.com/seline.js"
+          data-token="d5476c3985a32dd"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

@@ -358,9 +358,9 @@ export default function Home() {
               </div>
 
               <div>
-                <h6 className="text-lg font-semibold text-black mb-2">
+                <h3 className="text-lg font-semibold text-black mb-2">
                   What thumbnail resolutions are available for download?
-                </h6>
+                </h3>
                 <p className="text-sm text-[#606060] mb-4">
                   Our thumbnail downloader provides multiple resolutions
                   including HD (1280x720), SD (640x480), and HQ (480x360). We
@@ -371,9 +371,9 @@ export default function Home() {
               </div>
 
               <div>
-                <h6 className="text-lg font-semibold text-black mb-2">
+                <h3 className="text-lg font-semibold text-black mb-2">
                   Do I need to install any software or browser extensions?
-                </h6>
+                </h3>
                 <p className="text-sm text-[#606060] mb-4">
                   No installation is required! All our tools work directly in
                   your web browser on any device - desktop, tablet, or mobile.
@@ -383,9 +383,9 @@ export default function Home() {
               </div>
 
               <div>
-                <h6 className="text-lg font-semibold text-black mb-2">
+                <h3 className="text-lg font-semibold text-black mb-2">
                   Is there a limit on how many times I can use these tools?
-                </h6>
+                </h3>
                 <p className="text-sm text-[#606060] mb-4">
                   There are absolutely no usage limits! You can use our YouTube
                   tools as many times as you need, whether you're downloading
