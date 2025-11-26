@@ -12,8 +12,11 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://yttoolbox.com'),
-  title: "YtToolBox",
+  title: "YtToolBox - YouTube Tools Collection",
   description: "YouTube Tools Collection",
+  icons: {
+    icon: '/fav.svg',
+  },
 };
 
 export default function RootLayout({
