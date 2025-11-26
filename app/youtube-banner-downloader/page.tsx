@@ -62,7 +62,7 @@ export default function BannerDownloaderPage() {
     return (
         <div className="flex flex-col min-h-screen">
             <Navbar />
-            <main className="flex-grow pt-20 min-h-[calc(100vh-160px)]">
+            <main className="grow pt-20 min-h-[calc(100vh-160px)]">
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

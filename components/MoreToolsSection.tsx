@@ -80,7 +80,7 @@ const MoreToolsSection = () => {
                                     <h6 className="text-lg font-bold mb-4 text-black">
                                         {tool.title}
                                     </h6>
-                                    <p className="flex-grow text-sm text-black">
+                                    <p className="grow text-sm text-black">
                                         {tool.description}
                                     </p>
                                 </div>

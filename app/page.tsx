@@ -94,7 +94,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow pt-20 min-h-[calc(100vh-160px)]">
+      <main className="grow pt-20 min-h-[calc(100vh-160px)]">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -122,12 +122,12 @@ export default function Home() {
                 <div className="p-6 bg-purple-light flex items-center justify-center rounded-t-lg border-b border-[#e1bee7]">
                   <MdDownload className="text-5xl text-purple-main" />
                 </div>
-                <div className="flex-grow p-6 flex flex-col justify-between">
+                <div className="grow p-6 flex flex-col justify-between">
                   <div>
                     <h3 className="text-2xl font-semibold mb-2 text-[#333333]">
                       YouTube Thumbnail Downloader
                     </h3>
-                    <p className="text-[#666666] mb-6 flex-grow">
+                    <p className="text-[#666666] mb-6 grow">
                       Download high-quality thumbnails from any YouTube video.
                       Get thumbnails in multiple resolutions including HD
                       quality. Perfect for creating thumbnails, social media
@@ -150,12 +150,12 @@ export default function Home() {
                 <div className="p-6 bg-purple-light flex items-center justify-center rounded-t-lg border-b border-[#e1bee7]">
                   <MdLink className="text-5xl text-purple-main" />
                 </div>
-                <div className="flex-grow p-6 flex flex-col justify-between">
+                <div className="grow p-6 flex flex-col justify-between">
                   <div>
                     <h3 className="text-2xl font-semibold mb-2 text-[#333333]">
                       YouTube Timestamp Link Generator
                     </h3>
-                    <p className="text-[#666666] mb-6 flex-grow">
+                    <p className="text-[#666666] mb-6 grow">
                       Create direct links to specific moments in YouTube videos.
                       Share specific parts of a video with others, or use them
                       for social media content, blog posts, or video analysis.
@@ -174,12 +174,12 @@ export default function Home() {
                 <div className="p-6 bg-purple-light flex items-center justify-center rounded-t-lg border-b border-[#e1bee7]">
                   <MdCode className="text-5xl text-purple-main" />
                 </div>
-                <div className="flex-grow p-6 flex flex-col justify-between">
+                <div className="grow p-6 flex flex-col justify-between">
                   <div>
                     <h3 className="text-2xl font-semibold mb-2 text-[#333333]">
                       YouTube Embed Code Generator
                     </h3>
-                    <p className="text-[#666666] mb-6 flex-grow">
+                    <p className="text-[#666666] mb-6 grow">
                       Create responsive embed codes for YouTube videos.
                       Customize video size, controls, and behavior to fit your
                       website or blog. Perfect for content creators, marketers,
@@ -199,12 +199,12 @@ export default function Home() {
                 <div className="p-6 bg-purple-light flex items-center justify-center rounded-t-lg border-b border-[#e1bee7]">
                   <MdDownload className="text-5xl text-purple-main" />
                 </div>
-                <div className="flex-grow p-6 flex flex-col justify-between">
+                <div className="grow p-6 flex flex-col justify-between">
                   <div>
                     <h3 className="text-2xl font-semibold mb-2 text-[#333333]">
                       YouTube Profile Picture Downloader
                     </h3>
-                    <p className="text-[#666666] mb-6 flex-grow">
+                    <p className="text-[#666666] mb-6 grow">
                       Download high-quality profile pictures from any YouTube
                       channel. Get channel avatars in multiple resolutions
                       including HD quality. Perfect for creating thumbnails,
@@ -224,12 +224,12 @@ export default function Home() {
                 <div className="p-6 bg-purple-light flex items-center justify-center rounded-t-lg border-b border-[#e1bee7]">
                   <MdDownload className="text-5xl text-purple-main" />
                 </div>
-                <div className="flex-grow p-6 flex flex-col justify-between">
+                <div className="grow p-6 flex flex-col justify-between">
                   <div>
                     <h3 className="text-2xl font-semibold mb-2 text-[#333333]">
                       YouTube Banner Downloader
                     </h3>
-                    <p className="text-[#666666] mb-6 flex-grow">
+                    <p className="text-[#666666] mb-6 grow">
                       Download high-quality banners from any YouTube channel.
                       Get channel banners in multiple resolutions including HD
                       quality. Perfect for creating thumbnails, social media
@@ -242,52 +242,6 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-            {/* Youtube Transcript Downloader */}
-            <Link href="/youtube-transcript-downloader" className="no-underline">
-              <div className="rounded-lg border border-gray-200 transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-lg cursor-pointer h-full flex flex-col bg-[#fafafa]">
-                <div className="p-6 bg-purple-light flex items-center justify-center rounded-t-lg border-b border-[#e1bee7]">
-                  <MdDownload className="text-5xl text-purple-main" />
-                </div>
-                <div className="flex-grow p-6 flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-2xl font-semibold mb-2 text-[#333333]">
-                      YouTube Transcript Downloader
-                    </h3>
-                    <p className="text-[#666666] mb-6 flex-grow">
-                      Download transcripts from any YouTube video. Get transcripts
-                      in TXT or SRT format with timestamps. Perfect for content
-                      creators, students, and researchers.
-                    </p>
-                  </div>
-                  <button className="w-full py-3 px-6 text-lg border-2 border-purple-main text-purple-main rounded hover:border-purple-dark hover:bg-purple-main/5 transition-colors mt-auto">
-                    Download Transcript
-                  </button>
-                </div>
-              </div>
-            </Link>
-              {/* Youtube video to blog */}
-              <Link href="/youtube-video-to-blog" className="no-underline">
-                <div className="rounded-lg border border-gray-200 transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-lg cursor-pointer h-full flex flex-col bg-[#fafafa]">
-                  <div className="p-6 bg-purple-light flex items-center justify-center rounded-t-lg border-b border-[#e1bee7]">
-                    <MdDownload className="text-5xl text-purple-main" />
-                  </div>
-                  <div className="flex-grow p-6 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-2xl font-semibold mb-2 text-[#333333]">
-                        YouTube Video to Blog
-                      </h3>
-                      <p className="text-[#666666] mb-6 flex-grow">
-                        Convert YouTube videos to blog posts. Get blog posts in
-                        HTML format with timestamps. Perfect for content creators,
-                        students, and researchers.
-                      </p>
-                    </div>
-                    <button className="w-full py-3 px-6 text-lg border-2 border-purple-main text-purple-main rounded hover:border-purple-dark hover:bg-purple-main/5 transition-colors mt-auto">
-                      Convert Video to Blog
-                    </button>
-                  </div>
-                </div>
-              </Link>
           </div>
         </div>
 
@@ -300,7 +254,7 @@ export default function Home() {
 
             <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-center md:items-start">
               <div className="flex-1 max-w-full md:max-w-[280px] text-center mb-4 md:mb-0">
-                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-youtube-red to-youtube-dark rounded-full">
+                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-linear-to-br from-youtube-red to-youtube-dark rounded-full">
                   <svg
                     width="32"
                     height="32"
@@ -338,7 +292,7 @@ export default function Home() {
               </div>
 
               <div className="flex-1 max-w-full md:max-w-[280px] text-center mb-4 md:mb-0">
-                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-[#FF6B35] to-[#FF4500] rounded-full">
+                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-linear-to-br from-[#FF6B35] to-[#FF4500] rounded-full">
                   <svg
                     width="32"
                     height="32"
@@ -374,7 +328,7 @@ export default function Home() {
               </div>
 
               <div className="flex-1 max-w-[280px] md:max-w-[280px] text-center mx-auto">
-                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-[#4CAF50] to-[#45a049] rounded-full">
+                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-linear-to-br from-[#4CAF50] to-[#45a049] rounded-full">
                   <svg
                     width="32"
                     height="32"
