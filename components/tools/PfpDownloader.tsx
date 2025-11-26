@@ -40,14 +40,30 @@ const PfpDownloader = () => {
             const channelId = extractChannelId(url);
             if (!channelId) {
                 setError("Invalid YouTube channel URL. Please enter a valid channel, user, or @ URL.");
+                setLoading(false);
                 return;
             }
 
-            // Note: This is a simplified version. In production, you'd need to use YouTube API
-            // For demo purposes, we'll show an error message
-            setError("Note: PFP download requires YouTube API integration. This is a demo interface.");
+            // Call the existing API route
+            const response = await fetch(`/api/channel-info?id=${encodeURIComponent(channelId)}`);
+            const data = await response.json();
+
+            if (!response.ok || !data.success) {
+                setError(data.error || "Failed to fetch channel information");
+                setLoading(false);
+                return;
+            }
+
+            // Use the high quality thumbnail
+            const highQualityUrl = data.data.thumbnails.high?.url;
+            if (highQualityUrl) {
+                setPfpUrl(highQualityUrl);
+            } else {
+                setError("Profile picture not available for this channel");
+            }
 
         } catch (err) {
+            console.error("Error:", err);
             setError("Failed to fetch profile picture. Please check the URL and try again.");
         } finally {
             setLoading(false);
@@ -122,14 +138,35 @@ const PfpDownloader = () => {
                                 </div>
                             )}
 
-                            <button
-                                onClick={handleFetch}
-                                disabled={loading}
-                                className="w-full py-4 font-semibold rounded-xl text-lg bg-youtube-red text-white shadow-[0_4px_12px_rgba(255,0,0,0.3)] hover:bg-youtube-dark transition-colors disabled:bg-gray-300 disabled:text-gray-500 disabled:shadow-none flex items-center justify-center gap-2"
-                            >
-                                <MdDownload className="text-2xl" />
-                                {loading ? "Processing..." : "Get Profile Picture"}
-                            </button>
+                            {pfpUrl && (
+                                <div className="space-y-4">
+                                    <div className="rounded-xl overflow-hidden border-2 border-gray-200">
+                                        <img
+                                            src={pfpUrl}
+                                            alt="Channel Profile Picture"
+                                            className="w-full h-auto"
+                                        />
+                                    </div>
+                                    <button
+                                        onClick={() => handleDownload(pfpUrl)}
+                                        className="w-full py-4 font-semibold rounded-xl text-lg bg-green-600 text-white shadow-[0_4px_12px_rgba(0,200,0,0.3)] hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
+                                    >
+                                        <MdDownload className="text-2xl" />
+                                        Download Profile Picture
+                                    </button>
+                                </div>
+                            )}
+
+                            {!pfpUrl && (
+                                <button
+                                    onClick={handleFetch}
+                                    disabled={loading}
+                                    className="w-full py-4 font-semibold rounded-xl text-lg bg-youtube-red text-white shadow-[0_4px_12px_rgba(255,0,0,0.3)] hover:bg-youtube-dark transition-colors disabled:bg-gray-300 disabled:text-gray-500 disabled:shadow-none flex items-center justify-center gap-2"
+                                >
+                                    <MdDownload className="text-2xl" />
+                                    {loading ? "Processing..." : "Get Profile Picture"}
+                                </button>
+                            )}
                         </div>
                     </div>
                 </div>
